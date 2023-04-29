@@ -1,0 +1,435 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+/* Hamburger Menu starts here */
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width:414px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+}
+
+
+/* New CSS */
+
+
+
+html {
+    background-color: rgba(122, 191, 191, .5);
+    width: auto;
+    justify-content: center;
+}
+
+body {
+    background-color: #f2f2f2;  
+    
+}
+
+.icon-container {
+    display: flex;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+p {
+    font-family: 'Montserrat', normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.list-items {
+    display: block;
+    text-align: center;
+}
+
+a {
+    color:#f2f2f2;
+}
+
+form {
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    color: #eb5428;
+    justify-content: center;
+    font-family: 'Montserrat', normal;
+}
+
+#mySearch {
+    list-style-type: none;
+    width: 100%;
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    color: #eb5428;
+    justify-content: center;
+    font-family: 'Montserrat', normal;
+}
+
+#street-tacos {
+    justify-content: center;
+    display: block;
+    position: static;
+}
+
+#food {
+    width:auto;
+    position: relative;
+}
+
+#tacos {
+    position: static;
+}
+
+div h2 {
+    position: relative;
+    justify-content: center;
+}
+#details {
+    position: static;
+
+}
+
+div dl {
+    display:block;
+    justify-content: center;
+}
+
+div ul {
+    position: sticky;
+}
+
+#ingredients {
+    position: static;
+}
+
+
+
+
+#directions {
+    position: static;
+}
+
+h2 {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-size: 30px;
+    position: static;
+    text-align: center;
+}
+
+ul {
+    position: relative;
+}
+
+h2 ul {
+    position: relative;
+}
+
+dt {
+    font-family: 'Montserrat', bold;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+dd {
+    font-family: 'Montserrat', normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#dishes {
+    background-color: #7abfbf;
+    position: static;
+    
+}
+
+.sides-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+h3 {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-size: 25px;
+}
+
+nav {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-size: 20px;
+}
+
+#main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    list-style-type: none;
+    color:#ffffff;
+    
+}
+
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 2em;
+}
+
+li a {
+    color:#f2f2f2;
+}
+
+
+#breakfast {
+    clip-path: circle(65px at center);
+}
+
+#brunch {
+    clip-path: circle(65px at center);
+}
+
+#lunch {
+    clip-path: circle(65px at center);
+}
+
+#dinner {
+    clip-path: circle(65px at center);
+}
+
+#apps {
+    clip-path: circle(65px at center);
+}
+
+#desserts {
+    clip-path: circle(65px at center);
+}
+
+#beverages {
+    clip-path: circle(65px at center);
+}
+
+#social {
+    color:#ffffff;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    
+}
+
+#taco-cheesington {
+    clip-path: circle(100px at center);
+}
+
+
+footer {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-size: 20px;
+}
+
+
+footer p {
+    color:#f2f2f2;
+}
+
+
+
+/* media quieries */
+
+@media screen and (min-width:768px) {
+    nav {
+        display: grid;
+        grid-template-rows: auto;
+        position: static;
+    }
+
+    #street-tacos {
+        display: block;
+        position: relative;
+    }
+
+    #details {
+        justify-content: center;
+    }
+
+    #details dl {
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .food-details {
+        display: flex;
+        position: relative;;
+    }
+
+    #ingredients {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+    }    
+
+    #directions {
+        display: block;
+        
+    }
+
+    .sides-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+   #main-nav {
+        text-align: center;
+   }
+
+   footer {
+        text-align: right;
+   }
+
+}
+
+@media screen and (min-width:1280px) {
+    nav {
+        display: grid;
+        grid-template-rows: auto;
+        position: static;
+    }
+
+    #street-tacos {
+        display: block;
+        position: relative;
+    }
+
+    #details {
+        background-color: #0d0d0d;
+        color: rgba(122, 191, 191, .5);
+        justify-content: center;
+    }
+
+    #details dl {
+       display: flex;
+       justify-content: center;
+
+    }
+
+    .food-details {
+        display: flex;
+        position: relative;;
+    }
+
+    #ingredients {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+    }    
+
+    #directions {
+        display: block;
+        
+    }
+
+    .sides-container {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+   #main-nav {
+        text-align: center;
+   }
+
+   #social {
+    align-items: center;
+    position: relative;
+   }
+
+   footer {
+        text-align: left;
+   }
+
+}
+
+
+
+
+
+
+
